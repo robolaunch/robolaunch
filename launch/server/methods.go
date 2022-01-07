@@ -14,6 +14,7 @@ import (
 	"go.temporal.io/api/workflowservice/v1"
 	"go.temporal.io/sdk/client"
 	"google.golang.org/grpc/metadata"
+	"google.golang.org/protobuf/proto"
 )
 
 func (s *server) CreateLaunch(ctx context.Context, in *launchPb.CreateRequest) (*launchPb.LaunchState, error) {
@@ -185,7 +186,11 @@ func compareFlows(a []*launchPb.LaunchView, b []*launchPb.LaunchView) bool {
 		return false
 	}
 	for i, workflow := range a {
-		if workflow.WorkflowId != b[i].WorkflowId {
+		// if workflow != b[i] {
+		// 	return false
+		// }
+
+		if !proto.Equal(workflow, b[i]) {
 			return false
 		}
 	}

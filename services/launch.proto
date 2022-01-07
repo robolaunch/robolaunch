@@ -8,6 +8,8 @@ service Launch {
   rpc ListLaunch (Empty) returns (stream LaunchList) {}
   rpc CreateLaunch (CreateRequest) returns (LaunchState) {}
   rpc OperateLaunch (OperateRequest) returns (LaunchState) {}
+  rpc GetLaunch (OperateRequest) returns (LaunchState) {}
+
 }
 
 message Empty {}
@@ -37,10 +39,16 @@ message LaunchState {
     string node_ip = 8;
 }
 
+message LaunchView {
+ 
+  string name = 1;
+  string namespace = 2;
+  string launch_type = 3;
+  string workload_status = 4;
+  string workflow_id = 5; 
+  string run_id=6;
+}
+
 message LaunchList {
-  string username = 1;
-  string name = 2;
-  string namespace = 3;
-  string launch_type = 4;
-  string workload_status = 5;
+  repeated LaunchView launches= 1;
 }

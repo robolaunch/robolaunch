@@ -21,6 +21,7 @@ type LaunchClient interface {
 	ListLaunch(ctx context.Context, in *Empty, opts ...grpc.CallOption) (Launch_ListLaunchClient, error)
 	CreateLaunch(ctx context.Context, in *CreateRequest, opts ...grpc.CallOption) (*LaunchState, error)
 	OperateLaunch(ctx context.Context, in *OperateRequest, opts ...grpc.CallOption) (*LaunchState, error)
+	GetLaunch(ctx context.Context, in *OperateRequest, opts ...grpc.CallOption) (*LaunchState, error)
 }
 
 type launchClient struct {
@@ -81,6 +82,15 @@ func (c *launchClient) OperateLaunch(ctx context.Context, in *OperateRequest, op
 	return out, nil
 }
 
+func (c *launchClient) GetLaunch(ctx context.Context, in *OperateRequest, opts ...grpc.CallOption) (*LaunchState, error) {
+	out := new(LaunchState)
+	err := c.cc.Invoke(ctx, "/launch.Launch/GetLaunch", in, out, opts...)
+	if err != nil {
+		return nil, err
+	}
+	return out, nil
+}
+
 // LaunchServer is the server API for Launch service.
 // All implementations must embed UnimplementedLaunchServer
 // for forward compatibility
@@ -88,6 +98,7 @@ type LaunchServer interface {
 	ListLaunch(*Empty, Launch_ListLaunchServer) error
 	CreateLaunch(context.Context, *CreateRequest) (*LaunchState, error)
 	OperateLaunch(context.Context, *OperateRequest) (*LaunchState, error)
+	GetLaunch(context.Context, *OperateRequest) (*LaunchState, error)
 	mustEmbedUnimplementedLaunchServer()
 }
 
@@ -103,6 +114,9 @@ func (UnimplementedLaunchServer) CreateLaunch(context.Context, *CreateRequest) (
 }
 func (UnimplementedLaunchServer) OperateLaunch(context.Context, *OperateRequest) (*LaunchState, error) {
 	return nil, status.Errorf(codes.Unimplemented, "method OperateLaunch not implemented")
+}
+func (UnimplementedLaunchServer) GetLaunch(context.Context, *OperateRequest) (*LaunchState, error) {
+	return nil, status.Errorf(codes.Unimplemented, "method GetLaunch not implemented")
 }
 func (UnimplementedLaunchServer) mustEmbedUnimplementedLaunchServer() {}
 
@@ -174,6 +188,24 @@ func _Launch_OperateLaunch_Handler(srv interface{}, ctx context.Context, dec fun
 	return interceptor(ctx, in, info, handler)
 }
 
+func _Launch_GetLaunch_Handler(srv interface{}, ctx context.Context, dec func(interface{}) error, interceptor grpc.UnaryServerInterceptor) (interface{}, error) {
+	in := new(OperateRequest)
+	if err := dec(in); err != nil {
+		return nil, err
+	}
+	if interceptor == nil {
+		return srv.(LaunchServer).GetLaunch(ctx, in)
+	}
+	info := &grpc.UnaryServerInfo{
+		Server:     srv,
+		FullMethod: "/launch.Launch/GetLaunch",
+	}
+	handler := func(ctx context.Context, req interface{}) (interface{}, error) {
+		return srv.(LaunchServer).GetLaunch(ctx, req.(*OperateRequest))
+	}
+	return interceptor(ctx, in, info, handler)
+}
+
 // Launch_ServiceDesc is the grpc.ServiceDesc for Launch service.
 // It's only intended for direct use with grpc.RegisterService,
 // and not to be introspected or modified (even as a copy)
@@ -188,6 +220,10 @@ var Launch_ServiceDesc = grpc.ServiceDesc{
 		{
 			MethodName: "OperateLaunch",
 			Handler:    _Launch_OperateLaunch_Handler,
+		},
+		{
+			MethodName: "GetLaunch",
+			Handler:    _Launch_GetLaunch_Handler,
 		},
 	},
 	Streams: []grpc.StreamDesc{

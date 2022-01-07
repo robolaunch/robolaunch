@@ -6,10 +6,12 @@ import (
 	"log"
 	"os"
 	"strings"
+	"time"
 
 	"github.com/google/uuid"
 	launchPb "github.com/robolaunch/robolaunch/api"
 	launchflow "github.com/robolaunch/robolaunch/launch/pkg/workflow"
+	"go.temporal.io/api/workflowservice/v1"
 	"go.temporal.io/sdk/client"
 	"google.golang.org/grpc/metadata"
 )
@@ -128,14 +130,64 @@ func (s *server) OperateLaunch(ctx context.Context, in *launchPb.OperateRequest)
 	}, nil
 }
 
-// func (s *server) ListLaunch(ctx context.Context, in *launchPb.Empty) (*launchPb.LaunchList, error) {
-// 	log.Printf("---OperateLaunch---")
+func (s *server) ListLaunch(in *launchPb.Empty, stream launchPb.Launch_ListLaunchServer) error {
+	log.Printf("---OperateLaunch---")
+	//TODO: Get query from here
 
-// 	return &launchPb.LaunchList{
-// 		Username:       "",
-// 		Namespace:      "",
-// 		Name:           "",
-// 		LaunchType:     "",
-// 		WorkloadStatus: "",
-// 	}, nil
-// }
+	c, err := client.NewClient(client.Options{
+		HostPort: os.Getenv("TEMPORAL_SERVER_IP"),
+	})
+
+	if err != nil {
+		return err
+	}
+	var oldResult = []*launchPb.LaunchView{}
+	for {
+		r, err := c.ListWorkflow(context.Background(), &workflowservice.ListWorkflowExecutionsRequest{
+			Namespace: "default",
+			Query:     `DeploymentNamespace="tester"`,
+		})
+		if err != nil {
+			return err
+		}
+		result := []*launchPb.LaunchView{}
+
+		for _, workflow := range r.Executions {
+			result = append(result, &launchPb.LaunchView{
+				Name:       strings.Trim(string(workflow.SearchAttributes.IndexedFields["DeploymentName"].Data), `\"`),
+				Namespace:  strings.Trim(string(workflow.SearchAttributes.IndexedFields["DeploymentNamespace"].Data), `\"`),
+				WorkflowId: workflow.GetExecution().GetWorkflowId(),
+				RunId:      workflow.GetExecution().GetRunId(),
+			})
+
+		}
+		if !compareFlows(result, oldResult) {
+			stream.Send(&launchPb.LaunchList{
+				Launches: result,
+			})
+		}
+		oldResult = result
+		time.Sleep(time.Second * 2)
+		err = stream.Context().Err()
+		if err != nil {
+			fmt.Println("No client. Terminated")
+			return nil
+		}
+
+	}
+
+}
+
+//FIXME: Create good logic for it!
+func compareFlows(a []*launchPb.LaunchView, b []*launchPb.LaunchView) bool {
+	if len(a) != len(b) {
+		fmt.Println("SEND!")
+		return false
+	}
+	for i, workflow := range a {
+		if workflow.WorkflowId != b[i].WorkflowId {
+			return false
+		}
+	}
+	return true
+}

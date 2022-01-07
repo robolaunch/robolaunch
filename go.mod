@@ -6,6 +6,7 @@ require (
 	github.com/Nerzal/gocloak/v10 v10.0.1
 	github.com/google/uuid v1.3.0
 	github.com/stretchr/testify v1.7.0
+	go.temporal.io/api v1.5.0
 	go.temporal.io/sdk v1.12.0
 	google.golang.org/grpc v1.43.0
 	google.golang.org/protobuf v1.27.1
@@ -39,7 +40,6 @@ require (
 	github.com/robfig/cron v1.2.0 // indirect
 	github.com/segmentio/ksuid v1.0.4 // indirect
 	github.com/stretchr/objx v0.3.0 // indirect
-	go.temporal.io/api v1.5.0 // indirect
 	go.uber.org/atomic v1.9.0 // indirect
 	golang.org/x/net v0.0.0-20211209124913-491a49abca63 // indirect
 	golang.org/x/oauth2 v0.0.0-20210819190943-2bc19b11175f // indirect

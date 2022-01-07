@@ -25,6 +25,10 @@ func main() {
 	w.RegisterActivity(launchflow.ScaleOut)
 	w.RegisterActivity(launchflow.ScaleUp)
 	w.RegisterActivity(launchflow.CreateUserSpace)
+	w.RegisterActivity(launchflow.CreateLaunchHelm)
+	w.RegisterActivity(launchflow.DeleteLaunchHelm)
+	w.RegisterActivity(launchflow.ScaleDownHelm)
+	w.RegisterActivity(launchflow.ScaleUpHelm)
 
 	err = w.Run(worker.InterruptCh())
 	if err != nil {

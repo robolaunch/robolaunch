@@ -40,7 +40,10 @@ func LaunchWorkflow(ctx workflow.Context, req LaunchRequest) error {
 	}
 	fmt.Println(namespaceStatus)
 
-	err = workflow.ExecuteActivity(ctx, CreateLaunch, req).Get(ctx, &launchState)
+	// WITHOUT HELM
+	// err = workflow.ExecuteActivity(ctx, CreateLaunch, req).Get(ctx, &launchState)
+
+	err = workflow.ExecuteActivity(ctx, CreateLaunchHelm, req).Get(ctx, &launchState)
 	if err != nil {
 		return err
 	}
@@ -52,20 +55,20 @@ func LaunchWorkflow(ctx workflow.Context, req LaunchRequest) error {
 		c.Receive(ctx, &signalVal)
 		workflow.GetLogger(ctx).Info("Received signal!", "Signal", signalName, "value", signalVal)
 		if signalVal.Operation == "DELETE" {
-			err = workflow.ExecuteActivity(ctx, DeleteLaunch, signalVal).Get(ctx, &launchState)
+			err = workflow.ExecuteActivity(ctx, DeleteLaunchHelm, signalVal).Get(ctx, &launchState)
 			if err != nil {
 				fmt.Println(err)
 			}
 		}
 		if signalVal.Operation == "STOP" {
-			err = workflow.ExecuteActivity(ctx, ScaleOut, signalVal).Get(ctx, &launchState.WorkloadStatus)
+			err = workflow.ExecuteActivity(ctx, ScaleDownHelm, signalVal).Get(ctx, &launchState.WorkloadStatus)
 			if err != nil {
 				launchState.WorkloadStatus = "FAILED"
 				fmt.Println(err)
 			}
 		}
 		if signalVal.Operation == "START" {
-			err = workflow.ExecuteActivity(ctx, ScaleUp, signalVal).Get(ctx, &launchState.WorkloadStatus)
+			err = workflow.ExecuteActivity(ctx, ScaleUpHelm, signalVal).Get(ctx, &launchState.WorkloadStatus)
 			if err != nil {
 				launchState.WorkloadStatus = "FAILED"
 				fmt.Println(err)

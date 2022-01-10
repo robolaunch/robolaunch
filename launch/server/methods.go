@@ -2,6 +2,9 @@ package main
 
 import (
 	"context"
+	"encoding/base64"
+	"encoding/json"
+	"errors"
 	"fmt"
 	"log"
 	"os"
@@ -17,10 +20,14 @@ import (
 	"google.golang.org/protobuf/proto"
 )
 
+type UserInfo struct {
+	Username string `json:"preferred_username"`
+}
+
 func (s *server) CreateLaunch(ctx context.Context, in *launchPb.CreateRequest) (*launchPb.LaunchState, error) {
 	//Getting id token from grpc metadata
 	headers, _ := metadata.FromIncomingContext(ctx)
-	idToken := headers["authorization"][0]
+	idToken := strings.TrimPrefix(headers["authorization"][0], "Bearer ")
 	searchAttributes := map[string]interface{}{
 		"DeploymentName":      in.Name,
 		"DeploymentNamespace": in.Namespace,
@@ -80,7 +87,7 @@ func (s *server) OperateLaunch(ctx context.Context, in *launchPb.OperateRequest)
 	// //Getting id token from grpc metadata
 	headers, _ := metadata.FromIncomingContext(ctx)
 
-	idToken := headers["authorization"][0]
+	idToken := strings.TrimPrefix(headers["authorization"][0], "Bearer ")
 	c, err := client.NewClient(client.Options{
 		HostPort: os.Getenv("TEMPORAL_SERVER_IP"),
 	})
@@ -134,7 +141,24 @@ func (s *server) OperateLaunch(ctx context.Context, in *launchPb.OperateRequest)
 func (s *server) ListLaunch(in *launchPb.Empty, stream launchPb.Launch_ListLaunchServer) error {
 	log.Printf("---OperateLaunch---")
 	//TODO: Get query from here
+	headers, _ := metadata.FromIncomingContext(stream.Context())
+	fmt.Println(headers)
+	if headers["x-jwt"][0] == "" {
+		return errors.New("parsed token is empty")
+	}
 
+	decoded, err := base64.StdEncoding.DecodeString(headers["x-jwt"][0])
+	if err != nil {
+		return err
+	}
+
+	var user = UserInfo{}
+	err = json.Unmarshal(decoded, &user)
+	if err != nil {
+		return err
+	}
+	fmt.Println(user.Username)
+	fmt.Println(`DeploymentNamespace="` + user.Username + `" and ExecutionStatus="Running"`)
 	c, err := client.NewClient(client.Options{
 		HostPort: os.Getenv("TEMPORAL_SERVER_IP"),
 	})
@@ -146,7 +170,7 @@ func (s *server) ListLaunch(in *launchPb.Empty, stream launchPb.Launch_ListLaunc
 	for {
 		r, err := c.ListWorkflow(context.Background(), &workflowservice.ListWorkflowExecutionsRequest{
 			Namespace: "default",
-			Query:     `DeploymentNamespace="tester"`,
+			Query:     `DeploymentNamespace="` + user.Username + `" and ExecutionStatus="Running"`,
 		})
 		if err != nil {
 			return err

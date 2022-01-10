@@ -70,7 +70,7 @@ func CreateLaunchHelm(l LaunchRequest) (LaunchStatus, error) {
 	//TODO: Add following functions part as a workflow
 
 	// Check namespace first
-	httpPort, err := kubeops.GetUnallocatedPort(l.IDToken)
+	httpPort, err := kubeops.GetUnallocatedPort()
 	if err != nil {
 		return LaunchStatus{}, err
 	}

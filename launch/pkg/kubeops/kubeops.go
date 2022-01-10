@@ -274,8 +274,8 @@ func ScaleDeployment(name string, namespace string, replicas int32, token string
 	return nil
 }
 
-func GetUnallocatedPort(token string) (int32, error) {
-	client, err := GetKubeClient(token)
+func GetUnallocatedPort() (int32, error) {
+	client, err := GetAdminKubeClient()
 	if err != nil {
 		return 0, err
 	}

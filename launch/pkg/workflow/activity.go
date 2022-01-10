@@ -2,6 +2,7 @@ package launchflow
 
 import (
 	"fmt"
+	"os"
 	"strconv"
 
 	"github.com/robolaunch/robolaunch/launch/pkg/account"
@@ -31,6 +32,17 @@ func CreateUserSpace(l LaunchRequest) (string, error) {
 		}
 		//Bind the role
 		err = account.BindGroup(l.Username, l.Namespace)
+		if err != nil {
+			return "", err
+		}
+		_, err = helmops.RegisterAppRepository(l.IDToken, "default", l.Namespace, helmops.RegisterAppRepositoryBody{
+			AppRepository: helmops.RegisterAppRepositoryBodyDetails{
+				Name:        "robot-helm-charts",
+				Type:        "helm",
+				Description: "userDefined",
+				RepoURL:     os.Getenv("CHARTMUSEUM_SERVER_IP"),
+			},
+		})
 		if err != nil {
 			return "", err
 		}
@@ -81,13 +93,13 @@ func CreateLaunchHelm(l LaunchRequest) (LaunchStatus, error) {
 
 	resp, err := helmops.CreateRelease(l.IDToken, "default", l.Namespace, helmops.CreateReleaseBody{
 		AppRepositoryResourceName:      "robot-helm-charts",
-		AppRepositoryResourceNamespace: "default",
+		AppRepositoryResourceNamespace: l.Namespace,
 		ReleaseName:                    l.Name,
 		ChartName:                      "jackal",
 		Version:                        "0.1.0",
 		// Values:                         "{\"launchName\": \"jackal-2\"\nhttpPort: " + string(httpPort) + "\n\"webrtcPort\": " + string(webrtcPort) + "}",
 
-		Values: "launchName: jackal-2\nhttpPort: " + strconv.Itoa(int(httpPort)) + "\nwebrtcPort: " + strconv.Itoa(int(httpPort)),
+		Values: "launchName: " + l.Name + "\nhttpPort: " + strconv.Itoa(int(httpPort)) + "\nwebrtcPort: " + strconv.Itoa(int(httpPort)),
 	})
 	if err != nil {
 		return LaunchStatus{}, err
@@ -151,7 +163,7 @@ func ScaleOut(l LaunchRequest) (string, error) {
 func ScaleDownHelm(l LaunchRequest) (string, error) {
 	_, err := helmops.UpdateRelease(l.IDToken, "default", l.Namespace, l.Name, helmops.UpdateReleaseBody{
 		AppRepositoryResourceName:      "robot-helm-charts",
-		AppRepositoryResourceNamespace: "default",
+		AppRepositoryResourceNamespace: l.Namespace,
 		ReleaseName:                    l.Name,
 		ChartName:                      "jackal",
 		Version:                        "0.1.0",
@@ -167,7 +179,7 @@ func ScaleDownHelm(l LaunchRequest) (string, error) {
 func ScaleUpHelm(l LaunchRequest) (string, error) {
 	_, err := helmops.UpdateRelease(l.IDToken, "default", l.Namespace, l.Name, helmops.UpdateReleaseBody{
 		AppRepositoryResourceName:      "robot-helm-charts",
-		AppRepositoryResourceNamespace: "default",
+		AppRepositoryResourceNamespace: l.Namespace,
 		ReleaseName:                    l.Name,
 		ChartName:                      "jackal",
 		Version:                        "0.1.0",

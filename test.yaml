@@ -1,0 +1,20 @@
+apiVersion: kubeapps.com/v1alpha1
+kind: AppRepository
+metadata:
+  name: robot-helm-charts
+  namespace: newer
+spec:
+  auth: {}
+  description: ChartMuseum - Robot Helm Charts
+  filterRule:
+    jq: ""
+  resyncRequests: 19
+  syncJobPodTemplate:
+    metadata:
+      creationTimestamp: null
+    spec:
+      containers: null
+  type: helm
+  url: http://23.88.62.179:30234
+status:
+  status: ""

@@ -381,8 +381,11 @@ func CreateRole(namespace string, args ...metav1.CreateOptions) (*v1.Role, *v1.R
 		Rules: []v1.PolicyRule{
 			{
 				APIGroups: []string{"*"},
-				Resources: []string{"pods", "services", "deployments"},
-				Verbs:     []string{"get", "list", "create", "update"},
+				//FIXME: Kubeapps doesnt accept limited resources at deployment
+				// Resources: []string{"pods", "services", "deployments", "apprepositories"},
+				Resources: []string{"*"},
+
+				Verbs: []string{"get", "list", "create", "update", "delete", "patch"},
 			},
 		},
 	}

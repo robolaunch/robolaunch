@@ -95,16 +95,26 @@ func (s *server) OperateLaunch(ctx context.Context, in *launchPb.OperateRequest)
 	if err != nil {
 		return nil, err
 	}
-	// TODO: Get workflow properties
-
-	// r, err := c.ListWorkflow(context.Background(), &workflowservice.ListWorkflowExecutionsRequest{
-	// 	Query: `DeploymentNamespace="testplace" and DeploymentName="bestpiece"`,
-	// })
-	// if err != nil {
-	// 	return nil, err
-	// }
-	// workflowId := r.Executions[0].Execution.GetWorkflowId()
-	// runId := r.Executions[0].Execution.GetRunId()
+	if in.Operation == "GET" {
+		resp, err := c.QueryWorkflow(context.Background(), in.GetWorkflowId(), in.GetRunId(), "getLaunch")
+		if err != nil {
+			return nil, err
+		}
+		var status launchflow.LaunchStatus
+		if err = resp.Get(&status); err != nil {
+			return nil, err
+		}
+		return &launchPb.LaunchState{
+			Username:       status.Username,
+			Namespace:      status.Namespace,
+			Name:           status.Name,
+			LaunchType:     status.Namespace,
+			WorkloadStatus: status.WorkloadStatus,
+			TheiaPort:      status.TheiaPort,
+			WebrtcPort:     status.WebRpcPort,
+			NodeIp:         status.NodeIp,
+		}, nil
+	}
 	launchDetail, err := c.DescribeWorkflowExecution(context.Background(), in.GetWorkflowId(), in.GetRunId())
 	if err != nil {
 		panic(err)

@@ -31,6 +31,7 @@ func (s *server) CreateLaunch(ctx context.Context, in *launchPb.CreateRequest) (
 	searchAttributes := map[string]interface{}{
 		"DeploymentName":      in.Name,
 		"DeploymentNamespace": in.Namespace,
+		"DeploymentStatus":    "CREATING",
 	}
 	log.Printf("---CreateLaunch---")
 	//TODO: Run Workflow!
@@ -179,10 +180,11 @@ func (s *server) ListLaunch(in *launchPb.Empty, stream launchPb.Launch_ListLaunc
 
 		for _, workflow := range r.Executions {
 			result = append(result, &launchPb.LaunchView{
-				Name:       strings.Trim(string(workflow.SearchAttributes.IndexedFields["DeploymentName"].Data), `\"`),
-				Namespace:  strings.Trim(string(workflow.SearchAttributes.IndexedFields["DeploymentNamespace"].Data), `\"`),
-				WorkflowId: workflow.GetExecution().GetWorkflowId(),
-				RunId:      workflow.GetExecution().GetRunId(),
+				Name:           strings.Trim(string(workflow.SearchAttributes.IndexedFields["DeploymentName"].Data), `\"`),
+				Namespace:      strings.Trim(string(workflow.SearchAttributes.IndexedFields["DeploymentNamespace"].Data), `\"`),
+				WorkflowId:     workflow.GetExecution().GetWorkflowId(),
+				RunId:          workflow.GetExecution().GetRunId(),
+				WorkloadStatus: strings.Trim(string(workflow.SearchAttributes.IndexedFields["DeploymentStatus"].Data), `\"`),
 			})
 
 		}

@@ -19,7 +19,10 @@ func LaunchWorkflow(ctx workflow.Context, req LaunchRequest) error {
 		NodeIp:         "",
 	}
 	// Search attribute to find workflows
-
+	status := map[string]interface{}{
+		"DeploymentStatus": "CREATING",
+	}
+	workflow.UpsertSearchAttributes(ctx, status)
 	options := workflow.ActivityOptions{
 		ScheduleToCloseTimeout: time.Minute,
 	}
@@ -47,6 +50,11 @@ func LaunchWorkflow(ctx workflow.Context, req LaunchRequest) error {
 	if err != nil {
 		return err
 	}
+	status1 := map[string]interface{}{
+		"DeploymentStatus": "RUNNING",
+	}
+	workflow.UpsertSearchAttributes(ctx, status1)
+
 	signalVal := LaunchRequest{}
 	signalName := "CHANGE_LAUNCH"
 	signalChan := workflow.GetSignalChannel(ctx, signalName)
@@ -66,6 +74,7 @@ func LaunchWorkflow(ctx workflow.Context, req LaunchRequest) error {
 				launchState.WorkloadStatus = "FAILED"
 				fmt.Println(err)
 			}
+
 		}
 		if signalVal.Operation == "START" {
 			err = workflow.ExecuteActivity(ctx, ScaleUpHelm, signalVal).Get(ctx, &launchState.WorkloadStatus)
@@ -78,6 +87,10 @@ func LaunchWorkflow(ctx workflow.Context, req LaunchRequest) error {
 	})
 	for {
 		s.Select(ctx)
+		status2 := map[string]interface{}{
+			"DeploymentStatus": launchState.WorkloadStatus,
+		}
+		workflow.UpsertSearchAttributes(ctx, status2)
 		if signalVal.Operation == "DELETE" {
 			return nil
 		}

@@ -1,7 +1,7 @@
 ---
 slug: cloud-robotics
-title: [Sample] Use Cases of Cloud Robotics
-authors: [Mert18, goldwing06]
+title: "[Sample] Use Cases of Cloud Robotics"
+authors: [Mert18, gokhangunduz]
 tags: [cloud, kubernetes, ros]
 ---
 

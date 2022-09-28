@@ -1,6 +1,6 @@
 ---
-sidebar_label: Main Assets
+sidebar_label: Main Components
 sidebar_position: 1
 collapsed: true
 ---
-# Main Assets
+# Main Components

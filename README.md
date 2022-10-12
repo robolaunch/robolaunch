@@ -96,9 +96,9 @@ Architectural components of robolaunch are defined below.
         - **[robolaunch UI](./docs/concepts/robolaunch/management-suite/management-console/ui.md)** - frontend that enables performing platform capabilities via user interface
   - **[robolaunch Management Components](./docs/concepts/robolaunch/management-suite/management-components/README.md)** - subcomponent of management suite that contains other open-source management tools
 
-- **[robolaunch Kubernetes Distribution](./docs/concepts/robolaunch/kubernetes-distribution/README.md)** - Kubernetes distributions for central cloud, regional cloud and edge cloud
-    - **[robolaunch Super Cloud Instance](./docs/concepts/robolaunch/kubernetes-distribution/regional/super-cloud-instance.md)** - Kubernetes cluster which is the control plane of cloud instances (virtual clusters)
-    - **[robolaunch Cloud Instance (Virtual Cluster)](./docs/concepts/robolaunch/kubernetes-distribution/regional/cloud-instance.md)** - tenant Kubernetes cluster that contains fleets of robots in a region
+- **[robolaunch Kubernetes Infrastructure](./docs/concepts/robolaunch/kubernetes-infrastructure/README.md)** - Kubernetes infrastructures for central cloud, regional cloud and edge cloud
+    - **[robolaunch Super Cloud Instance](./docs/concepts/robolaunch/kubernetes-infrastructure/regional/super-cloud-instance.md)** - Kubernetes cluster which is the control plane of cloud instances (virtual clusters)
+    - **[robolaunch Cloud Instance (Virtual Cluster)](./docs/concepts/robolaunch/kubernetes-infrastructure/regional/cloud-instance.md)** - tenant Kubernetes cluster that contains fleets of robots in a region
 
 - **[robolaunch Kubernetes Operators](./docs/concepts/robolaunch/kubernetes-operators/README.md)**
     - **[robolaunch Robot Operator](./docs/concepts/robolaunch/kubernetes-operators/robot-operator.md)** - software that does decomposition, regional distribution, lifecycle management and configuration of ROS-based robots in cloud-only, cloud-powered or cloud-connected modes
@@ -125,7 +125,7 @@ For more detail, see [concepts](./docs/concepts/README.md).
 
 Submodules of [robolaunch Cloud Robotics Platform](https://github.com/robolaunch) are as follows:
 
-- [robolaunch Kubernetes Distribution](./docs/setup/robolaunch/kubernetes-distribution/README.md)
+- [robolaunch Kubernetes Infrastructure](./docs/setup/robolaunch/kubernetes-infrastructure/README.md)
 - [robolaunch Kubernetes Robot Operator](./docs/setup/robolaunch/kubernetes-operators/robot-operator.md)
 - [robolaunch Management Suite](./docs/setup/robolaunch/management-suite/README.md)
 

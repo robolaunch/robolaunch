@@ -8,9 +8,6 @@
         </h1>
     </p>
     <p align="center">
-        <a href="https://github.com/robolaunch/robolaunch/releases">
-        <img src="https://img.shields.io/github/v/release/robolaunch/robolaunch" alt="release">
-        </a>
         <a href="https://github.com/robolaunch/robolaunch/blob/master/LICENSE">
         <img src="https://img.shields.io/github/license/robolaunch/robolaunch" alt="license">
         </a>

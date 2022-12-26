@@ -1,7 +1,12 @@
 <div align="center">
     <a href="robolaunch.io" title="robolaunch">
-        <img src="https://raw.githubusercontent.com/robolaunch/trademark/main/logos/png/website.png" width="400" height="auto"/>
+        <img src="https://raw.githubusercontent.com/robolaunch/trademark/main/logos/svg/rocket.svg" width="400" height="auto"/>
     </a>
+    <p align="center">
+        <h1 href="robolaunch.io" title="robolaunch">
+            robolaunch Cloud Robotics Platform
+        </h1>
+    </p>
     <p align="center">
         <a href="https://github.com/robolaunch/robolaunch/releases">
         <img src="https://img.shields.io/github/v/release/robolaunch/robolaunch" alt="release">

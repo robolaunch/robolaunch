@@ -17,6 +17,59 @@
     ],
     "versions": [
         {
+            "date": "2023-01-14",
+            "version": "platform-v0.1.1-prerelease",
+            "roboticsCloud": {
+                "managementSuite": {
+                    "ui": {
+                        "repository": "",
+                        "release": ""
+                    },
+                    "centralOrchestrator": {
+                        "repository": "https://github.com/robolaunch/central-orchestrator",
+                        "release": ""
+                    }
+                },
+                "kubernetes": {
+                    "superCluster": {
+                        "version": "1.23.9"
+                    },
+                    "operators": {
+                        "cert-manager": {
+                            "repository": "https://github.com/cert-manager/cert-manager",
+                            "release": "https://github.com/cert-manager/cert-manager/releases/download/v1.8.0/cert-manager.yaml"
+                        },
+                        "connectionHub": {
+                            "version": "v0.1.5",
+                            "repository": "https://github.com/robolaunch/connection-hub-operator",
+                            "release": "https://github.com/robolaunch/connection-hub-operator/releases/download/v0.1.5/connection_hub_operator.yaml",
+                            "subresources": {
+                                "cloudInstance": "https://github.com/robolaunch/connection-hub-operator/releases/download/v0.1.5/connection-hub-cloud-instance.yaml",
+                                "physicalInstance": "https://github.com/robolaunch/connection-hub-operator/releases/download/v0.1.5/connection-hub-physical-instance.yaml"
+                            }
+                        },
+                        "robot": {
+                            "version": "v0.1.6",
+                            "repository": "https://github.com/robolaunch/robot-operator",
+                            "release": "https://github.com/robolaunch/robot-operator/releases/download/v0.1.6/robot_operator.yaml",
+                            "subresources": {
+                                "robot": "https://github.com/robolaunch/robot-operator/raw/v0.1.6/docs/examples/robolaunch-arcelik/robot-compact.yaml",
+                                "workspaceManager": "",
+                                "buildManager": "https://github.com/robolaunch/robot-operator/raw/v0.1.6/docs/examples/robolaunch-arcelik/buildmgr.yaml",
+                                "launchManager": "https://github.com/robolaunch/robot-operator/raw/v0.1.6/docs/examples/robolaunch-arcelik/launchmgr.yaml",
+                                "robotDevSuite": "https://github.com/robolaunch/robot-operator/raw/v0.1.6/docs/examples/robolaunch-arcelik/dev-suite.yaml"
+                            }
+                        },
+                        "fleet": {
+                            "version": "v0.1.0",
+                            "repository": "https://github.com/robolaunch/fleet-operator",
+                            "release": "https://github.com/robolaunch/fleet-operator/releases/download/v0.1.0/fleet_operator.yaml"
+                        }
+                    }
+                }
+            }
+        },
+        {
             "date": "2023-01-10",
             "version": "platform-v0.1.0-prerelease",
             "roboticsCloud": {

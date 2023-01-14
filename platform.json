@@ -102,13 +102,13 @@
                         },
                         "robot": {
                             "repository": "https://github.com/robolaunch/robot-operator",
-                            "release": "https://github.com/robolaunch/robot-operator/releases/download/v0.1.4/robot_operator.yaml",
+                            "release": "https://github.com/robolaunch/robot-operator/releases/download/v0.1.5/robot_operator.yaml",
                             "subresources": {
-                                "robot": "https://github.com/robolaunch/robot-operator/raw/v0.1.4/docs/examples/robolaunch-arcelik/robot-compact.yaml",
+                                "robot": "https://github.com/robolaunch/robot-operator/raw/v0.1.5/docs/examples/robolaunch-arcelik/robot-compact.yaml",
                                 "workspaceManager": "",
-                                "buildManager": "https://github.com/robolaunch/robot-operator/raw/v0.1.4/docs/examples/robolaunch-arcelik/buildmgr.yaml",
-                                "launchManager": "https://github.com/robolaunch/robot-operator/raw/v0.1.4/docs/examples/robolaunch-arcelik/launchmgr.yaml",
-                                "robotDevSuite": "https://github.com/robolaunch/robot-operator/raw/v0.1.4/docs/examples/robolaunch-arcelik/dev-suite.yaml"
+                                "buildManager": "https://github.com/robolaunch/robot-operator/raw/v0.1.5/docs/examples/robolaunch-arcelik/buildmgr.yaml",
+                                "launchManager": "https://github.com/robolaunch/robot-operator/raw/v0.1.5/docs/examples/robolaunch-arcelik/launchmgr.yaml",
+                                "robotDevSuite": "https://github.com/robolaunch/robot-operator/raw/v0.1.5/docs/examples/robolaunch-arcelik/dev-suite.yaml"
                             }
                         },
                         "fleet": {

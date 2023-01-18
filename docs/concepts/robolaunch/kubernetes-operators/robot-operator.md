@@ -42,9 +42,9 @@ Robot is a custom resource that manages multiple subresources to operate the ROS
 This is a current list of operational subresources and their duties.
 
 - **Configuration Agent ([RobotConfig](#configuration-agent-robotconfig))** - prepares an OS environment for robot based on it's image
-- **Cloning Agent ([RobotClone](#cloning-agent-robotclone))** - clones repositories and prepares ROS/2 workspaces
-- **Building Agent ([RobotBuild](#building-agent-robotbuild))** - installs packages' dependencies and builds the workspaces
-- **Launching Agent ([RobotLaunch](#launching-agent-robotlaunch))** - launches the packages
+- **Cloning Agent ([WorkspaceManager](#cloning-agent-workspacemanager))** - clones repositories and prepares ROS/2 workspaces
+- **Building Agent ([BuildManager](#building-agent-buildmanager))** - installs packages' dependencies and builds the workspaces
+- **Launching Agent ([LaunchManager](#launching-agent-launchmanager))** - launches the packages
 
 <div align="center">
     <img src="https://raw.githubusercontent.com/robolaunch/trademark/main/repository-media/robolaunch/concepts/robot-operator-operational-subresources.png" width="100%"/>
@@ -62,7 +62,7 @@ Configuration agent,
     <img src="https://raw.githubusercontent.com/robolaunch/trademark/main/repository-media/robolaunch/concepts/robot-operator-configuration-agent.png" width="100%"/>
 </div>
 
-#### Cloning Agent (RobotClone)
+#### Cloning Agent (WorkspaceManager)
 Cloning agent is responsible for cloning the desired repositories into workspaces. This agent runs one time, after configuration agent successfully finished it's job.
 
 Cloning agent,
@@ -72,7 +72,7 @@ Cloning agent,
     <img src="https://raw.githubusercontent.com/robolaunch/trademark/main/repository-media/robolaunch/concepts/robot-operator-cloning-agent.png" width="100%"/>
 </div>
 
-#### Building Agent (RobotBuild)
+#### Building Agent (BuildManager)
 Building agent is responsible for making the robot ready for launching. It creates jobs to install dependencies, build ROS/2 packages and make any other configurations. Jobs' operations also can be defined using Robot API customly. This agent runs after cloning agent is successfully finished it's job for the first time, then it can be executed any time by manipulating the Robot API in the ROS/2 software development loop.
 
 Building agent,
@@ -82,7 +82,7 @@ Building agent,
     <img src="https://raw.githubusercontent.com/robolaunch/trademark/main/repository-media/robolaunch/concepts/robot-operator-building-agent.png" width="100%"/>
 </div>
 
-#### Launching Agent (RobotLaunch)
+#### Launching Agent (LaunchManager)
 Launching agent is responsible for launching the ROS nodes. By ROS node decomposition feature, every node can be started in seperate container. This agent runs after building agent finished it's job successfully for the first time, then it can be executed any time by manipulating the Robot API in the ROS/2 software development loop.
 
 Launching agent,

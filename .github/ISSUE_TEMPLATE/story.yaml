@@ -13,6 +13,18 @@ body:
       required: true
 
   - type: textarea
+    id: notify-teams
+    attributes:
+      label: "Notify Teams"
+      value: |
+        These teams will be notified when this issue is updated: (delete irrelevant teams)
+        - @robolaunch/management-suite
+        - @robolaunch/kubernetes-operators
+        - @robolaunch/kubernetes-infrastructure
+    validations:
+      required: true
+
+  - type: textarea
     id: internal-issues
     attributes:
       label: Internal Issues

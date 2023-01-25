@@ -8,3 +8,25 @@ body:
       label: "The Story"
     validations:
       required: true
+
+  - type: textarea
+    id: internal-issues
+    attributes:
+      label: Internal Issues
+      value: |
+        ### [Robot Operator](https://github.com/robolaunch/robot-operator) - [Kubernetes Operator Development Board](https://github.com/orgs/robolaunch/projects/2/views/1)
+        - [Add new internal issue here]
+
+        ### [Fleet Operator](https://github.com/robolaunch/fleet-operator) - [Kubernetes Operator Development Board](https://github.com/orgs/robolaunch/projects/2/views/1)
+        - [Add new internal issue here]
+
+        ### [Connection Hub Operator](https://github.com/robolaunch/connection-hub-operator) - [Kubernetes Operator Development Board](https://github.com/orgs/robolaunch/projects/2/views/1)
+        - [Add new internal issue here]
+
+        ### [Central Orchestrator](https://github.com/robolaunch/central-orchestrator) - [Management Suite Development Board](https://github.com/orgs/robolaunch/projects/4/views/1)
+        - [Add new internal issue here]
+
+        ### [UI](https://github.com/robolaunch/ui) - [Management Suite Development Board](https://github.com/orgs/robolaunch/projects/4/views/1)
+        - [Add new internal issue here]
+    validations:
+      required: true

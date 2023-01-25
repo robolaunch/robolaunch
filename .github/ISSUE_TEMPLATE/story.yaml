@@ -1,5 +1,5 @@
 name: Story
-description: Describe the high-level requirements or use-cases for robots
+description: Describe the high-level requirements or use-cases for robolaunch Cloud Robotics Platform.
 labels: ["story"]
 body:
   - type: textarea

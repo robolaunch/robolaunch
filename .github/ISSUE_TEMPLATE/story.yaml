@@ -6,6 +6,9 @@ body:
     id: story
     attributes:
       label: "The Story"
+      value: |
+        # [Story Header]
+        [Add story description here.]
     validations:
       required: true
 

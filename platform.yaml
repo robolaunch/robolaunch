@@ -14,6 +14,62 @@ maintainers:
 - "@mertgungor"
 - "@Metecengiz567"
 versions:
+- date: "2023-05-25"
+  version: 0.1.2-prerelease.7
+  roboticsCloud:
+    managementSuite:
+      ui:
+        version: ""
+        repository: https://github.com/robolaunch/ui
+        docs: ""
+        release: ""
+        helm:
+          repository: ""
+          version: ""
+      centralOrchestrator:
+        version: ""
+        repository: ""
+        release: ""
+        docs: ""
+        helm:
+          repository: ""
+          version: ""
+    kubernetes:
+      version: 1.24.10
+      components:
+        cert-manager:
+          version: v1.8.0
+          repository: https://github.com/cert-manager/cert-manager
+          docs: https://cert-manager.io/docs/
+          release: https://github.com/cert-manager/cert-manager/releases/download/v1.8.0/cert-manager.yaml
+          helm:
+            repository: https://charts.jetstack.io
+            version: 1.8.0
+      operators:
+        connectionHub:
+          version: v0.1.7-alpha.2
+          repository: https://github.com/robolaunch/connection-hub-operator
+          docs: https://robolaunch.github.io/connection-hub-operator/#/
+          release: https://raw.githubusercontent.com/robolaunch/connection-hub-operator/v0.1.7-alpha.2/hack/deploy/manifests/connection_hub_operator.yaml
+          helm:
+            repository: https://robolaunch.github.io/charts/
+            version: 0.1.7-alpha.2
+        robot:
+          version: v0.2.5-alpha.11
+          repository: https://github.com/robolaunch/robot-operator
+          docs: https://robolaunch.github.io/robot-operator/#/
+          release: https://raw.githubusercontent.com/robolaunch/robot-operator/v0.2.5-alpha.11/hack/deploy/manifests/robot_operator.yaml
+          helm:
+            repository: https://robolaunch.github.io/charts/
+            version: 0.2.5-alpha.11
+        fleet:
+          version: v0.1.6-alpha.10
+          repository: https://github.com/robolaunch/fleet-operator
+          docs: https://github.com/robolaunch/fleet-operator/blob/main/docs/reference.md
+          release: https://raw.githubusercontent.com/robolaunch/fleet-operator/v0.1.6-alpha.10/hack/deploy/manifests/fleet_operator.yaml
+          helm:
+            repository: https://robolaunch.github.io/charts/
+            version: 0.1.6-alpha.10
 - date: "2023-05-24"
   version: 0.1.2-prerelease.6
   roboticsCloud:

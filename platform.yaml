@@ -62,6 +62,11 @@ versions:
           helm:
             repository: https://robolaunch.github.io/charts/
             version: 0.2.5-alpha.12
+          images:
+            organization: robolaunchio
+            repository: devspace-robotics
+            tags:
+            - 0.1.0
         fleet:
           version: v0.1.6-alpha.10
           repository: https://github.com/robolaunch/fleet-operator

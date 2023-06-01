@@ -75,7 +75,7 @@ versions:
           helm:
             repository: https://robolaunch.github.io/charts/
             version: 0.1.6-alpha.10
-  developmentCloud:
+  devCloud:
     kubernetes:
       version: 1.24.10
       components:

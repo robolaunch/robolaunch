@@ -99,5 +99,40 @@ versions:
           images:
             organization: robolaunchio
             repository: devspace
-            tags:
-            - 0.1.1
+            domains:
+              plain:
+              - ubuntuDistro: focal
+                desktop: xfce
+                vdiVersion: 0.1.1
+              cad:
+              - application: qcad
+                version: 3.28.1
+                ubuntuDistro: focal
+                desktop: xfce
+                vdiVersion: 0.1.1
+              - application: blender
+                version: 2.82
+                ubuntuDistro: focal
+                desktop: xfce
+                vdiVersion: 0.1.1
+              - application: freecad
+                version: 0.18.4
+                ubuntuDistro: focal
+                desktop: xfce
+                vdiVersion: 0.1.1
+              - application: librecad
+                version: 2.1.3
+                ubuntuDistro: focal
+                desktop: xfce
+                vdiVersion: 0.1.1
+              - application: kicad
+                version: 7.0.5
+                ubuntuDistro: focal
+                desktop: xfce
+                vdiVersion: 0.1.1
+              simulation:
+              - application: carla
+                version: 0.1.0
+                ubuntuDistro: focal
+                desktop: xfce
+                vdiVersion: 0.1.1

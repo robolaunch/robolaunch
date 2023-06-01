@@ -16,24 +16,24 @@ maintainers:
 versions:
 - date: "2023-05-29"
   version: 0.1.2-prerelease.8
-  roboticsCloud:
-    managementSuite:
-      ui:
-        version: ""
-        repository: https://github.com/robolaunch/ui
-        docs: ""
-        release: ""
-        helm:
-          repository: ""
-          version: ""
-      centralOrchestrator:
-        version: ""
+  managementSuite:
+    ui:
+      version: ""
+      repository: https://github.com/robolaunch/ui
+      docs: ""
+      release: ""
+      helm:
         repository: ""
-        release: ""
-        docs: ""
-        helm:
-          repository: ""
-          version: ""
+        version: ""
+    centralOrchestrator:
+      version: ""
+      repository: ""
+      release: ""
+      docs: ""
+      helm:
+        repository: ""
+        version: ""
+  roboticsCloud:
     kubernetes:
       version: 1.24.10
       components:
@@ -75,6 +75,32 @@ versions:
           helm:
             repository: https://robolaunch.github.io/charts/
             version: 0.1.6-alpha.10
+  developmentCloud:
+    kubernetes:
+      version: 1.24.10
+      components:
+        cert-manager:
+          version: v1.8.0
+          repository: https://github.com/cert-manager/cert-manager
+          docs: https://cert-manager.io/docs/
+          release: https://github.com/cert-manager/cert-manager/releases/download/v1.8.0/cert-manager.yaml
+          helm:
+            repository: https://charts.jetstack.io
+            version: 1.8.0
+      operators:
+        devspace:
+          version: v0.1.0-alpha.1
+          repository: https://github.com/robolaunch/devspace-operator
+          docs: https://robolaunch.github.io/devspace-operator/#/
+          release: https://raw.githubusercontent.com/robolaunch/devspace-operator/v0.1.0-alpha.1/hack/deploy/manifests/devspace_operator.yaml
+          helm:
+            repository: https://robolaunch.github.io/charts/
+            version: 0.1.0-alpha.1
+          images:
+            organization: robolaunchio
+            repository: devspace
+            tags:
+            - 0.1.1
 - date: "2023-05-25"
   version: 0.1.2-prerelease.7
   roboticsCloud:

@@ -111,35 +111,35 @@ versions:
               cad:
               - application:
                   name: qcad
-                  version: 3.28.1
+                  version: "3.28.1-trial-linux-qt5.14-x86_64"
                 devspace:
                   ubuntuDistro: focal
                   desktop: xfce
                   version: 0.1.1
               - application:
                   name: blender
-                  version: 2.82
+                  version: "2.82.a+dfsg-1"
                 devspace:
                   ubuntuDistro: focal
                   desktop: xfce
                   version: 0.1.1
               - application:
                   name: freecad
-                  version: 0.18.4
+                  version: "0.18.4+dfsg2-1ubuntu4"
                 devspace:
                   ubuntuDistro: focal
                   desktop: xfce
                   version: 0.1.1
               - application:
                   name: librecad
-                  version: 2.1.3
+                  version: "2.1.3-1.2+deb10u1build0.20.04.1"
                 devspace:
                   ubuntuDistro: focal
                   desktop: xfce
                   version: 0.1.1
               - application:
                   name: kicad
-                  version: 7.0.5
+                  version: "7.0.5~ubuntu20.04.1"
                 devspace:
                   ubuntuDistro: focal
                   desktop: xfce

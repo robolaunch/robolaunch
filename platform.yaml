@@ -14,8 +14,8 @@ maintainers:
 - "@mertgungor"
 - "@Metecengiz567"
 versions:
-- date: "2023-05-29"
-  version: 0.1.2-prerelease.8
+- date: "2023-06-06"
+  version: 0.1.2-prerelease.9
   managementSuite:
     ui:
       version: ""
@@ -47,13 +47,13 @@ versions:
             version: 1.8.0
       operators:
         connectionHub:
-          version: v0.1.7-alpha.2
+          version: v0.1.7-alpha.3
           repository: https://github.com/robolaunch/connection-hub-operator
           docs: https://robolaunch.github.io/connection-hub-operator/#/
-          release: https://raw.githubusercontent.com/robolaunch/connection-hub-operator/v0.1.7-alpha.2/hack/deploy/manifests/connection_hub_operator.yaml
+          release: https://raw.githubusercontent.com/robolaunch/connection-hub-operator/v0.1.7-alpha.3/hack/deploy/manifests/connection_hub_operator.yaml
           helm:
             repository: https://robolaunch.github.io/charts/
-            version: 0.1.7-alpha.2
+            version: 0.1.7-alpha.3
         robot:
           version: v0.2.5-alpha.13
           repository: https://github.com/robolaunch/robot-operator
@@ -89,13 +89,13 @@ versions:
             version: 1.8.0
       operators:
         devspace:
-          version: v0.1.0-alpha.1
+          version: v0.1.0-alpha.3
           repository: https://github.com/robolaunch/devspace-operator
           docs: https://robolaunch.github.io/devspace-operator/#/
-          release: https://raw.githubusercontent.com/robolaunch/devspace-operator/v0.1.0-alpha.1/hack/deploy/manifests/devspace_operator.yaml
+          release: https://raw.githubusercontent.com/robolaunch/devspace-operator/v0.1.0-alpha.3/hack/deploy/manifests/devspace_operator.yaml
           helm:
             repository: https://robolaunch.github.io/charts/
-            version: 0.1.0-alpha.1
+            version: 0.1.0-alpha.3
           images:
             organization: robolaunchio
             repository: devspace

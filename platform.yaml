@@ -66,6 +66,7 @@ versions:
             organization: robolaunchio
             repository: devspace-robotics
             tags:
+            - 0.1.1
             - 0.1.0
         fleet:
           version: v0.1.6-alpha.10

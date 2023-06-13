@@ -55,7 +55,7 @@ versions:
             repository: https://robolaunch.github.io/charts/
             version: 0.1.7-alpha.5
           resources:
-            cloudInstance: https://gist.githubusercontent.com/tunahanertekin/f041e2c3fbc6cdaadd72816c350b357c/raw/cb7eb11330781cf6ffeb2211ad364353ecd47f4e/ch-ci.yaml
+            cloudInstance: https://gist.githubusercontent.com/tunahanertekin/f041e2c3fbc6cdaadd72816c350b357c/raw/725e00230c0512db424ca07adfaa034076f93bb0/ch-ci.yaml
         robot:
           version: v0.2.5-alpha.15
           repository: https://github.com/robolaunch/robot-operator

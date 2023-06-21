@@ -1,0 +1,11 @@
+# What's next
+
+This documentation aims to provide an overview of the robolaunch Cloud Robotics Platform, along with information on how to use it to navigate the different phases of robotics application development. It covers both conceptual and procedural aspects of the platform, as well as providing tutorials to help users get started and make the most of its capabilities.
+
+The documentation is organized into the following sub-sections:
+
+- [How to Guides](./platform/how-to-guides/): provide step-by-step instructions for completing specific tasks on the robolaunch platform.
+
+- [Tutorials](./platform/tutorials/): are for providing help to explore the capabilities of the platform by building running applications. These tutorials offers guidance on how to build different applications and use-cases on the platform. They aim to provide a more hands-on approach, allowing users to experiment and discover the capabilities of the platform without explicit instructions.
+
+- [Troubleshooting](./platform/troubleshooting/) and [FAQs](./platform/faq/)

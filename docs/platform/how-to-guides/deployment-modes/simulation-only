@@ -1,0 +1,102 @@
+# Pre-requisites
+
+- To create and organization
+- To create a robotics cloud
+- To create a cloud instance
+
+# Create Fleet
+Whether you will work on a single robot or multiple robots, first you need to create a fleet.
+
+To create a *Fleet*, follow below steps:
+
+<img src="https://raw.githubusercontent.com/robolaunch/trademark/main/repository-media/robolaunch/create-fleet-video.gif">
+
+1. Click on the **Fleet** button in the sidebar to open the list of Fleets. The current Fleets you have will be listed in the displayed tab.
+2. At the bottom of the opened tab, click on the **Create Fleet** button.
+> **_NOTE:_**  If you receive a prompt asking you to select an Organization, Robotics Cloud, or Cloud Instance, you need to click on the desired object to determine under which Organization, Robotics Cloud, or Cloud Instance the Fleet will be located. After completing the selection process, click the **Create Fleet** button again.
+3. After clicking, enter your desired Fleet name in the **Fleet name** field in the form that appears.
+4. Finally, click on the **Create a new Fleet** button.
+5. After clicking, you will be redirected to the Fleet list. In the displayed list, you can view the Fleet you created.
+
+# Create Virtual Robot
+To create a *Virtual Robot*, follow below steps:
+- Step 1: Robot Details
+- Step 2: Robot Workspace Configuration
+- Step 3: Robot Build Manager Configuration
+- Step 4: Robot Launch Manager Configuration
+
+## Step 1: Robot Details
+
+<img src="https://raw.githubusercontent.com/robolaunch/trademark/main/repository-media/robolaunch/create-robot-1.png">
+
+1. Click on the **Robot** button in the sidebar to open the list of robots. The current robots you have will be listed in the displayed tab.
+2. At the bottom of the opened tab, click on the **Create Robot** button.
+3. Choose **Virtual Robot** in the *Robot Type* field.
+4. From *Ros Distributions* section, select the ROS versions you want your robot to run on.
+5. Determine the preferred storage size for your robot. 
+
+> **_NOTE:_**  Keep in mind that storage sizes below 40GB are not recommended.
+
+6. Activate desired features:
+
+    - Code Editor,
+    - ROS 2 Bridge and
+    - Remote Desktop
+
+> **_NOTE:_**  If you keep the **Remote Desktop** feature enabled, you will need to enter the Session Count. This specifies the maximum number of simultaneous remote desktop connections. Choose the appropriate option for your needs.
+
+7. Determine **GPU Usage Enabled for Cloud Instance** preference.
+
+> **_NOTE:_**   *GPU Usage Enabled for Cloud Instance* feature determines the GPU capabilities of the virtual instance. It is recommended to keep it active for a stable CI/CD process.
+8. Finally, determine **Development Mode** preference. 
+
+> **_NOTE:_**  *Development Mode* parameter determines if your robot requires the 3rd (Build Step) and 4th (Launch Step) stages. When activated, the build and launch stages will be under your responsibility, and no automation process will occur.
+
+9. Click on the **Next Step** button.
+
+## Step 2. Virtual Robot Workspace Configuration
+
+After a brief waiting period, you will be presented with a form where you can configure the workspaces for the robot. The robot can host N number of workspaces, and each workspace can contain N number of repositories.
+
+<img src="https://raw.githubusercontent.com/robolaunch/trademark/main/repository-media/robolaunch/create-robot-2.png">
+
+1. Enter your desired **Workspace Name** in the corresponding field.
+2. In the **Workspace Distro** section, you can choose in which ROS distribution this workspace will run, based on the ROS distributions you selected in the previous step.
+3. Enter a desired **Repository Name** in the corresponding field.
+4. Enter the URL of the repository in the **Repository URL** field.
+5. If you want to clone a branch other than the default one during the repository cloning process, enter the name of the desired branch in the **Repository Branch** field.
+
+> **_NOTE:_**  A robot requires at least one workspace and each workspace requires at least one repository.
+6. Once you have completed the necessary filling process for N workspaces, click on the **Next Step** button below the form. 
+
+> **_NOTE:_**  If the development mode is active from the previous step, click the **Create Robot** button instead.
+
+> **_NOTE:_**  If you have set the "Development Mode" to active in the first step, you will be redirected to the robot's page after this stage.
+
+
+## Step 3. Robot Build Manager Configuration
+> **_NOTE:_** If the **Development Mode** is deactivated in the first step, you may encounter a waiting screen before proceeding to the 3rd step. In this step, the workspaces you created will go through the build process, so you need to wait for the completion of all processes from step 2. The waiting time may vary depending on the repositories you entered and can increase in parallel. During the waiting screen, you will be able to track the real-time progress of the cloud instance, including the actions performed on it.
+
+<img src="https://raw.githubusercontent.com/robolaunch/trademark/main/repository-media/robolaunch/create-robot-3.png">
+
+1. Enter a desired name in the **Build Manager Name** field of the form.
+2. Give a name to your **Build Step**.
+3. Below that, select the workspace where the build process will run.
+4. Choose whether the command in this workspace will be a **'shell/Command'** or a **'script'**.
+5. Then, write the command you want to run in the terminal.
+6. Finally, select the instance(s) on which this command will run. This is similar to deciding on which instance(s) the entered command will run.
+7. A build manager can contain multiple steps, but it must have at least one step. After filling in the necessary information and meeting the conditions, click the **Next Step** button at the bottom of the form.
+
+## Step 4. Robot Launch Manager Configuration
+
+> **_NOTE:_** If your build process is not completed, you are likely to encounter a waiting screen. The waiting process runs in parallel with the tasks to be performed in the build steps. During this waiting period, you can track the progress of the build steps and the actions performed.
+
+<img src="https://raw.githubusercontent.com/robolaunch/trademark/main/repository-media/robolaunch/create-robot-4.png">
+
+After the waiting process is completed, you can create multiple launch steps just like in the previous steps:
+1. Enter a desired step name.
+2. Select one of the workspaces you specified in step 2 for this step to run in.
+3. Enter the code you want to execute in the terminal for this step. It is important that this code block keeps running continuously.
+4. Just like in the previous steps, you will need to select the instance(s) on which the current launch command will run.
+5. Finally, during the launch process, you may need certain environment variables. You can enter the necessary environment values in the designated section below.
+6. Once you have completed this part of the form, you can start the robot's launch process by clicking the **Create Robot** button at the bottom of the form. After clicking, you will be redirected to the robot's page.

@@ -1,0 +1,31 @@
+# Overview
+
+[robolaunch](https://robolaunch.io/) is a Cloud-Native Robotics Platform that provides the end-to-end infrastructure, software stack and tools for developing, simulating, deploying and operating ROS/ROS 2 robots at scale.
+
+robolaunch's end-to-end infrastructure, which we also call it "Unified Robotics", enables users to develop robotics applications through Cloud IDE, simulate robots using tools such as Gazebo, Unity3D, Unreal Engine, Isaac Sim through VDI infrastructure that uses GPU power, deploy robotics applications to the physical robots remotely and operate the robot's status in a run-time with management, orchestration and monitoring functionalities.
+
+<img src="https://raw.githubusercontent.com/robolaunch/trademark/main/repository-media/cloudy/images/robolaunch-applications.png">
+
+# Why robolaunch?
+
+Robotics development contains many challenges itself. Such as it requires multi-domain knowledge to build a robot and this process is mostly dependent on expensive hardware. Therefore the process becomes hard to achieve and time consuming as a result.
+
+One of our biggest motivation with robolaunch is eliminating those challenges and reducing entry barriers. To provide that we want to give robotics developers the end-to-end infrastructure to develop, deploy and manage ROS/2 robots easily while providing GPU offloading to the cloud for compute and AI heavy workloads. 
+
+robolaunch Cloud Robotics Platform is based on Kubernetes because we believe the future of robotics will be a distributed and cloudified system and Kubernetes helps us to provide tenancy, automated deployments and self configuration of work-processes.
+
+We believe that robolaunch will provide great convenience to robotics developers in many ways. Whether you’re developing a drone, a quadruped robot like Spot or ANYmal, a mobile robot (such as AMR, UGV) or a robot arm, robolaunch platform will help you to just focus on the quality of your applications rather than the infrastructure and tools.
+
+- **Faster to Getting Started** - eliminates the time spent configuring a development environment locally on personal PCs
+
+- **Access to Powerful Computing Resources** - leverage from high-performance processors, GPUs, and large amounts of memory to develop and run complex robotics applications
+
+- **Cost Savings** - avoid the costs associated with purchasing and maintaining your own hardware and infrastructure. Save up from money and also significant amount of time
+
+- **Sim-to-Real** - remotely deploy (Over-the-Air (OTA)) the robotics applications that developed on robolaunch to the physical robot(s)
+
+- **Visualisation** - benefit from user-friendly interfaces and tools that make it easier to get started with robotics application development and also monitor and manage your robots in run time from robolaunch dashboard for a full control over your robots 
+
+- **Scalability and Flexibility** - handle sudden spikes in demand or experiment different configurations without having to invest in new hardware and benefit from platform features according to your needs
+
+- **Security** - by design robolaunch is a multi-tenant as each tenant is isolated from the others and has access only to their own data and resources platform to provide improved security and also scalability

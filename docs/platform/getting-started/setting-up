@@ -1,0 +1,45 @@
+# Sign up 
+
+To set up your *robolaunch.io* account follow the below steps:
+
+*Will be added soon...*
+# Create Organization
+
+To create your *robolaunch.io* account follow the below steps:
+
+<img src="https://raw.githubusercontent.com/robolaunch/trademark/main/repository-media/robolaunch/create-organization.gif">
+
+1. Click on the **Organization** button in the left sidebar. The current organizations you have will be listed in the displayed tab.
+2. At the bottom of the opened tab, click **Create Organization** button.
+2. Type the name of your Organization. Please note that your organization name should be minimum 8 to 24 characters, lowercase letters, numbers and hyphens only.
+3. Click **Create a new organization**.
+4. After creating your organization, you will be redirected to the organizational list. In the displayed list, you can view the organization you created.
+
+# Create Robotics Cloud
+
+To create a *Robotics Cloud* follow the below steps:
+
+<img src="https://raw.githubusercontent.com/robolaunch/trademark/main/repository-media/robolaunch/create-robotics-cloud.gif">
+
+1. Click on the **Robotics Cloud** button in the left sidebar. The current Robotics Clouds you have will be listed in the displayed tab.
+2. At the bottom of the opened tab, click on the **Create Robotics Cloud** button.
+> **_NOTE:_**  If you receive a prompt asking you to select an organization, you need to click on the desired organization to determine under which organization the "Robotics Cloud" will be located. After completing the selection process, click the **Create Robotics Cloud** button again.
+3. After clicking, type the name of your Robotics Cloud.
+4. Click **Create Robotics Cloud**.
+5. After clicking, you will be redirected to the Robotics Clouds list. In the displayed list, you can view the Robotics Cloud you created.
+
+# Create Cloud Instance
+
+To create a *Cloud Instance* follow the below steps:
+
+<img src="https://raw.githubusercontent.com/robolaunch/trademark/main/repository-media/robolaunch/create-cloud-instance-video.gif">
+
+1. Click on the **Instance** button in the sidebar to open the list of Instances. The current Instances you have will be listed in the displayed tab.
+2. At the bottom of the opened tab, click on the **Create Cloud Instance** button.
+> **_NOTE:_**  If you receive a prompt asking you to select an organization or Robotics Cloud, you need to click on the desired object to determine under which organization or Robotics Cloud the Cloud Instance will be located. After completing the selection process, click the **Create Cloud Instance** button again.
+3. After clicking, type the name of your Cloud Instance in the **Cloud Instance Name** field in the form that appears.
+4. From the **Providers** section, select the preferred provider with which you want the virtual instance to be created.
+5. From the **Regions** section, choose your current region or the closest region where the robot will operate.
+6. From the **Types** section, select your preference from the available resource models for the instance to be created.
+7. Finally, click on the **Create a new Cloud Instance** button.
+8. After clicking, you will be redirected to the Cloud Instances list. In the displayed list, you can view the Cloud Instance you created.

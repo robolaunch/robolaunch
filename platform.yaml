@@ -47,13 +47,13 @@ versions:
             version: 1.8.0
       operators:
         connectionHub:
-          version: v0.1.7-alpha.7
+          version: v0.1.7-alpha.8
           repository: https://github.com/robolaunch/connection-hub-operator
           docs: https://robolaunch.github.io/connection-hub-operator/#/
-          release: https://raw.githubusercontent.com/robolaunch/connection-hub-operator/v0.1.7-alpha.7/hack/deploy/manifests/connection_hub_operator.yaml
+          release: https://raw.githubusercontent.com/robolaunch/connection-hub-operator/v0.1.7-alpha.8/hack/deploy/manifests/connection_hub_operator.yaml
           helm:
             repository: https://robolaunch.github.io/charts/
-            version: 0.1.7-alpha.7
+            version: 0.1.7-alpha.8
           resources:
             cloudInstance: https://gist.githubusercontent.com/tunahanertekin/f041e2c3fbc6cdaadd72816c350b357c/raw/4c0c1220f5191023a45557f8fa7340219a7de654/ch-ci.yaml
         robot:

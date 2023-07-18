@@ -169,14 +169,14 @@ versions:
         devspace:
           ubuntuDistro: jammy
           desktop: xfce
-          version: 0.1.3
+          version: 0.1.4
       - application:
           name: ros2
           version: iron
         devspace:
           ubuntuDistro: jammy
           desktop: xfce
-          version: 0.1.3
+          version: 0.1.4
       simulation:
       - application:
           name: autoware

@@ -177,6 +177,13 @@ versions:
           ubuntuDistro: jammy
           desktop: xfce
           version: 0.1.4
+      - application:
+          name: carla-foxy
+          version: 0.9.13
+        devspace:
+          ubuntuDistro: focal
+          desktop: xfce
+          version: 0.1.4
       simulation:
       - application:
           name: autoware

@@ -86,13 +86,13 @@ versions:
             version: 1.8.0
       operators:
         devspace:
-          version: v0.1.0-alpha.3
+          version: v0.1.0-alpha.4
           repository: https://github.com/robolaunch/devspace-operator
           docs: https://robolaunch.github.io/devspace-operator/#/
-          release: https://raw.githubusercontent.com/robolaunch/devspace-operator/v0.1.0-alpha.3/hack/deploy/manifests/devspace_operator.yaml
+          release: https://raw.githubusercontent.com/robolaunch/devspace-operator/v0.1.0-alpha.4/hack/deploy/manifests/devspace_operator.yaml
           helm:
             repository: https://robolaunch.github.io/charts/
-            version: 0.1.0-alpha.3
+            version: 0.1.0-alpha.4
   images:
     organization: robolaunchio
     repository: devspace

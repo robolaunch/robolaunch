@@ -104,6 +104,13 @@ domains:
       desktop: xfce
       version: 0.1.1
   - application:
+      name: carla
+      version: 0.9.13
+    devspace:
+      ubuntuDistro: focal
+      desktop: xfce
+      version: 0.1.4
+  - application:
       name: unrealengine
       version: 5.2.0
     devspace:
@@ -210,6 +217,13 @@ domains:
       ubuntuDistro: focal
       desktop: xfce
       version: 0.1.1
+  - application:
+      name: yolov4
+      version: yolov4
+    devspace:
+      ubuntuDistro: focal
+      desktop: xfce
+      version: 0.1.4
   - application:
       name: yolov5
       version: v7.0

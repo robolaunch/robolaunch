@@ -326,18 +326,18 @@ versions:
         devspace:
           ubuntuDistro: focal
           desktop: xfce
-          version: "0.1.5"
+          version: "0.1.6"
       - application:
           name: yolov5
           version: "v7.0"
         devspace:
           ubuntuDistro: focal
           desktop: xfce
-          version: "0.1.5"
+          version: "0.1.6"
       - application:
           name: yolov7
           version: "main"
         devspace:
           ubuntuDistro: focal
           desktop: xfce
-          version: "0.1.5"
+          version: "0.1.6"

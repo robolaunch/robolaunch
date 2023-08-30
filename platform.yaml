@@ -57,13 +57,13 @@ versions:
           resources:
             cloudInstance: https://gist.githubusercontent.com/tunahanertekin/f041e2c3fbc6cdaadd72816c350b357c/raw/f0f79cbc65d6d7642f309cb05579b73ba75a2ddc/ch-ci.yaml
         robot:
-          version: v0.2.6-alpha.1
+          version: v0.2.6-alpha.2
           repository: https://github.com/robolaunch/robot-operator
           docs: https://robolaunch.github.io/robot-operator/#/
-          release: https://raw.githubusercontent.com/robolaunch/robot-operator/v0.2.6-alpha.1/hack/deploy/manifests/robot_operator.yaml
+          release: https://raw.githubusercontent.com/robolaunch/robot-operator/v0.2.6-alpha.2/hack/deploy/manifests/robot_operator.yaml
           helm:
             repository: https://robolaunch.github.io/charts/
-            version: 0.2.6-alpha.1
+            version: 0.2.6-alpha.2
         fleet:
           version: v0.1.6-alpha.14
           repository: https://github.com/robolaunch/fleet-operator

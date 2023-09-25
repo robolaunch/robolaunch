@@ -104,14 +104,14 @@ versions:
         devspace:
           ubuntuDistro: focal
           desktop: xfce
-          version: "0.1.6"
+          version: "0.1.7"
       - application:
           name: plain
           version: "0.1.0"
         devspace:
           ubuntuDistro: jammy
           desktop: xfce
-          version: "0.1.6"
+          version: "0.1.7"
       # cad:
       # - application:
       #     name: qcad

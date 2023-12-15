@@ -104,14 +104,14 @@ versions:
         devspace:
           ubuntuDistro: focal
           desktop: xfce
-          version: "0.1.13"
+          version: "0.1.14"
       - application:
           name: plain
           version: "0.1.0"
         devspace:
           ubuntuDistro: jammy
           desktop: xfce
-          version: "0.1.13"
+          version: "0.1.14"
       # cad:
       # - application:
       #     name: qcad
@@ -155,28 +155,28 @@ versions:
         devspace:
           ubuntuDistro: focal
           desktop: xfce
-          version: "0.1.8"
+          version: "0.1.14"
       - application:
           name: ros2
           version: "galactic"
         devspace:
           ubuntuDistro: focal
           desktop: xfce
-          version: "0.1.8"
+          version: "0.1.14"
       - application:
           name: ros2
           version: "humble"
         devspace:
           ubuntuDistro: jammy
           desktop: xfce
-          version: "0.1.8"
+          version: "0.1.14"
       - application:
           name: ros2
           version: "iron"
         devspace:
           ubuntuDistro: jammy
           desktop: xfce
-          version: "0.1.8"
+          version: "0.1.14"
       - application:
           name: carla-foxy
           version: "0.9.13"

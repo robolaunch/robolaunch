@@ -101,6 +101,7 @@ versions:
       - application:
           name: plain
           version: "0.1.0"
+          icon: https://raw.githubusercontent.com/robolaunch/trademark/main/logos/png/robolaunch-square-logo-64x64.png
         devspace:
           ubuntuDistro: focal
           desktop: xfce

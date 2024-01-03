@@ -195,14 +195,14 @@ versions:
       data-science:
       - application:
           name: pyspark
-          version: "pyspark-3.5.0"
+          version: "3.5.0"
         devspace:
           ubuntuDistro: focal
           desktop: xfce
           version: "0.1.16"
       - application:
           name: pyspark
-          version: "pyspark-3.5.0"
+          version: "3.5.0"
         devspace:
           ubuntuDistro: jammy
           desktop: xfce

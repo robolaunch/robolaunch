@@ -101,7 +101,9 @@ versions:
       - application:
           name: plain
           version: "0.1.0"
-          icon: https://raw.githubusercontent.com/robolaunch/trademark/main/logos/png/robolaunch-square-logo-64x64.png
+          alias: "Ubuntu 20.04"
+          description: "This robolaunch environment, featuring Ubuntu 20.04 and CUDA support, empowers developers with versatility across programming languages. Seamlessly switch between languages in this efficient platform, offering GPU-accelerated computing for a wide array of programming tasks."
+          icon: "https://raw.githubusercontent.com/robolaunch/trademark/main/applications/ubuntu-logo.png"
         devspace:
           ubuntuDistro: focal
           desktop: xfce
@@ -109,6 +111,9 @@ versions:
       - application:
           name: plain
           version: "0.1.0"
+          alias: "Ubuntu 22.04"
+          description: "This robolaunch environment, equipped with Ubuntu 22.04 and CUDA support, provides developers with flexibility across multiple programming languages. Effortlessly transition between languages in this streamlined platform, offering GPU-accelerated computing capabilities for diverse programming tasks."
+          icon: "https://raw.githubusercontent.com/robolaunch/trademark/main/applications/ubuntu-logo.png"
         devspace:
           ubuntuDistro: jammy
           desktop: xfce

@@ -121,6 +121,9 @@ versions:
       - application:
           name: plain
           version: "0.1.0"
+          alias: "Ubuntu 20.04 with cuDNN"
+          description: "This robolaunch environment, armed with Ubuntu 20.04 and CUDA support, caters to developers seeking versatility across programming languages. Effortlessly transition between languages in this streamlined platform, bolstered by GPU-accelerated computing capabilities and enhanced with NVIDIA cuDNN support for optimized deep neural network tasks."
+          icon: "https://raw.githubusercontent.com/robolaunch/trademark/main/applications/ubuntu-logo.png"
         devspace:
           ubuntuDistro: focal-cuda-12.0.0-cudnn
           desktop: xfce-amd64
@@ -128,6 +131,9 @@ versions:
       - application:
           name: plain
           version: "0.1.0"
+          alias: "Ubuntu 22.04 with cuDNN"
+          description: "This robolaunch environment, featuring Ubuntu 22.04 and CUDA support, is designed for developers requiring flexibility across programming languages. Seamlessly switch between languages in this efficient platform, fortified by GPU-accelerated computing and optimized for deep neural network tasks with NVIDIA cuDNN support."
+          icon: "https://raw.githubusercontent.com/robolaunch/trademark/main/applications/ubuntu-logo.png"
         devspace:
           ubuntuDistro: jammy-cuda-12.0.0-cudnn
           desktop: xfce-amd64
@@ -136,6 +142,9 @@ versions:
       - application:
           name: ros2
           version: "foxy"
+          alias: "ROS 2 Foxy Fitzroy"
+          description: "Get hands-on with ROS 2 Foxy Fitzroy in this Kubernetes-based development setup. With ROS 2 pre-installed, it's geared for practical use by roboticists. GPU support enhances computational efficiency, and DDS connectivity ensures seamless data exchange between cloud and physical instances, making it an optimal choice for technical development in robotics."
+          icon: "https://raw.githubusercontent.com/robolaunch/trademark/main/applications/ros-2-foxy-logo.png"
         devspace:
           ubuntuDistro: focal
           desktop: xfce
@@ -143,6 +152,9 @@ versions:
       - application:
           name: ros2
           version: "galactic"
+          alias: "ROS 2 Galactic Geochelone"
+          description: "Get hands-on with ROS 2 Galactic Geochelone in this Kubernetes-based development setup. With ROS 2 pre-installed, it's geared for practical use by roboticists. GPU support enhances computational efficiency, and DDS connectivity ensures seamless data exchange between cloud and physical instances, making it an optimal choice for technical development in robotics."
+          icon: "https://raw.githubusercontent.com/robolaunch/trademark/main/applications/ros-2-galactic-logo.png"
         devspace:
           ubuntuDistro: focal
           desktop: xfce
@@ -150,6 +162,9 @@ versions:
       - application:
           name: ros2
           version: "humble"
+          alias: "ROS 2 Humble Hawksbill"
+          description: "Get hands-on with ROS 2 Humble Hawksbill in this Kubernetes-based development setup. With ROS 2 pre-installed, it's geared for practical use by roboticists. GPU support enhances computational efficiency, and DDS connectivity ensures seamless data exchange between cloud and physical instances, making it an optimal choice for technical development in robotics."
+          icon: "https://raw.githubusercontent.com/robolaunch/trademark/main/applications/ros-2-humble-logo.png"
         devspace:
           ubuntuDistro: jammy
           desktop: xfce
@@ -157,6 +172,9 @@ versions:
       - application:
           name: ros2
           version: "iron"
+          alias: "ROS 2 Iron Irwini"
+          description: "Get hands-on with ROS 2 Iron Irwini in this Kubernetes-based development setup. With ROS 2 pre-installed, it's geared for practical use by roboticists. GPU support enhances computational efficiency, and DDS connectivity ensures seamless data exchange between cloud and physical instances, making it an optimal choice for technical development in robotics."
+          icon: "https://raw.githubusercontent.com/robolaunch/trademark/main/applications/ros-2-iron-logo.png"
         devspace:
           ubuntuDistro: jammy
           desktop: xfce
@@ -180,6 +198,9 @@ versions:
       - application:
           name: yolov4
           version: "yolov4-opencv-4.8.1"
+          alias: "YOLOv4"
+          description: "Get hands-on with YOLOv4 in this Kubernetes-native environment on robolaunch. Train models with Torch, accelerate processing with GPU support, deploy inference servers seamlessly, and enjoy complete OpenCV support. Your go-to workspace for mastering YOLOv4."
+          icon: "https://raw.githubusercontent.com/robolaunch/trademark/main/applications/yolo-logo.png"
         devspace:
           ubuntuDistro: focal
           desktop: xfce
@@ -187,6 +208,9 @@ versions:
       - application:
           name: yolov5
           version: "v7.0-opencv-4.8.1"
+          alias: "YOLOv5"
+          description: "Dive into YOLOv5 in this Kubernetes-native setup on robolaunch. Utilize Torch for model training, expedite processing with GPU support, deploy inference servers effortlessly, and benefit from comprehensive OpenCV support. Your practical workspace for mastering YOLOv5."
+          icon: "https://raw.githubusercontent.com/robolaunch/trademark/main/applications/yolo-logo.png"
         devspace:
           ubuntuDistro: focal
           desktop: xfce
@@ -194,6 +218,9 @@ versions:
       - application:
           name: yolov7
           version: "main-opencv-4.8.1"
+          alias: "YOLOv7"
+          description: "Immerse yourself in YOLOv7 with this Kubernetes-native setup on robolaunch. Employ Torch for model training, accelerate processing using GPU support, seamlessly deploy inference servers, and take advantage of comprehensive OpenCV support. Your practical workspace for mastering YOLOv7."
+          icon: "https://raw.githubusercontent.com/robolaunch/trademark/main/applications/yolo-logo.png"
         devspace:
           ubuntuDistro: focal
           desktop: xfce
@@ -202,6 +229,9 @@ versions:
       - application:
           name: pyspark
           version: "3.5.0"
+          alias: "Apache Spark with PySpark"
+          description: "Explore the capabilities of Apache Spark with PySpark in this dedicated environment on robolaunch. Designed for seamless integration, it's equipped for big data processing, allowing you to harness the power of Spark's distributed computing. Develop and execute PySpark applications effortlessly within this technical workspace tailored for robust data processing on robolaunch."
+          icon: "https://raw.githubusercontent.com/robolaunch/trademark/main/applications/apache-spark-logo.png"
         devspace:
           ubuntuDistro: focal
           desktop: xfce
@@ -209,6 +239,9 @@ versions:
       - application:
           name: pyspark
           version: "3.5.0"
+          alias: "Apache Spark with PySpark"
+          description: "Explore the capabilities of Apache Spark with PySpark in this dedicated environment on robolaunch. Designed for seamless integration, it's equipped for big data processing, allowing you to harness the power of Spark's distributed computing. Develop and execute PySpark applications effortlessly within this technical workspace tailored for robust data processing on robolaunch."
+          icon: "https://raw.githubusercontent.com/robolaunch/trademark/main/applications/apache-spark-logo.png"
         devspace:
           ubuntuDistro: jammy
           desktop: xfce

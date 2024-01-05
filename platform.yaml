@@ -179,21 +179,6 @@ versions:
           ubuntuDistro: jammy
           desktop: xfce
           version: "0.1.14"
-      # simulation:
-      # - application:
-      #     name: isaacgym
-      #     version: "4"
-      #   devspace:
-      #     ubuntuDistro: focal
-      #     desktop: xfce
-      #     version: "0.1.7"
-      # - application:
-      #     name: isaacgym-4-def-01
-      #     version: "10252023"
-      #   devspace:
-      #     ubuntuDistro: focal
-      #     desktop: xfce
-      #     version: "0.1.9"
       aiml:
       - application:
           name: yolov4
@@ -204,7 +189,7 @@ versions:
         devspace:
           ubuntuDistro: focal
           desktop: xfce
-          version: "0.1.15"
+          version: "0.1.16"
       - application:
           name: yolov5
           version: "v7.0-opencv-4.8.1"
@@ -214,7 +199,7 @@ versions:
         devspace:
           ubuntuDistro: focal
           desktop: xfce
-          version: "0.1.15"
+          version: "0.1.16"
       - application:
           name: yolov7
           version: "main-opencv-4.8.1"
@@ -224,7 +209,7 @@ versions:
         devspace:
           ubuntuDistro: focal
           desktop: xfce
-          version: "0.1.15"
+          version: "0.1.16"
       data-science:
       - application:
           name: pyspark

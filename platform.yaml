@@ -127,7 +127,7 @@ versions:
         devspace:
           ubuntuDistro: focal-cuda-12.0.0-cudnn
           desktop: xfce-amd64
-          version: "0.1.15"
+          version: "0.1.16"
       - application:
           name: plain
           version: "0.1.0"
@@ -137,7 +137,7 @@ versions:
         devspace:
           ubuntuDistro: jammy-cuda-12.0.0-cudnn
           desktop: xfce-amd64
-          version: "0.1.15"
+          version: "0.1.16"
       robotics:
       - application:
           name: ros2

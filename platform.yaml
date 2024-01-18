@@ -107,7 +107,7 @@ versions:
         devspace:
           ubuntuDistro: focal
           desktop: xfce
-          version: "0.1.16"
+          version: "0.1.17"
       - application:
           name: plain
           version: "0.1.0"
@@ -117,7 +117,7 @@ versions:
         devspace:
           ubuntuDistro: jammy
           desktop: xfce
-          version: "0.1.16"
+          version: "0.1.17"
       - application:
           name: plain
           version: "0.1.0"
@@ -127,7 +127,7 @@ versions:
         devspace:
           ubuntuDistro: focal-cuda-12.0.0-cudnn
           desktop: xfce-amd64
-          version: "0.1.16"
+          version: "0.1.17"
       - application:
           name: plain
           version: "0.1.0"
@@ -137,7 +137,7 @@ versions:
         devspace:
           ubuntuDistro: jammy-cuda-12.0.0-cudnn
           desktop: xfce-amd64
-          version: "0.1.16"
+          version: "0.1.17"
       robotics:
       - application:
           name: ros2
@@ -189,7 +189,7 @@ versions:
         devspace:
           ubuntuDistro: focal
           desktop: xfce
-          version: "0.1.16"
+          version: "0.1.17"
       - application:
           name: yolov5
           version: "v7.0-opencv-4.8.1"
@@ -199,7 +199,7 @@ versions:
         devspace:
           ubuntuDistro: focal
           desktop: xfce
-          version: "0.1.16"
+          version: "0.1.17"
       - application:
           name: yolov7
           version: "main-opencv-4.8.1"
@@ -209,7 +209,7 @@ versions:
         devspace:
           ubuntuDistro: focal
           desktop: xfce
-          version: "0.1.16"
+          version: "0.1.17"
       data-science:
       - application:
           name: pyspark
@@ -220,7 +220,7 @@ versions:
         devspace:
           ubuntuDistro: focal
           desktop: xfce
-          version: "0.1.16"
+          version: "0.1.17"
       - application:
           name: pyspark
           version: "3.5.0"

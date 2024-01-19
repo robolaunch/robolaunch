@@ -148,7 +148,7 @@ versions:
         devspace:
           ubuntuDistro: focal
           desktop: xfce
-          version: "0.1.14"
+          version: "0.2.6-alpha.18"
       - application:
           name: ros2
           version: "galactic"
@@ -158,7 +158,7 @@ versions:
         devspace:
           ubuntuDistro: focal
           desktop: xfce
-          version: "0.1.14"
+          version: "0.2.6-alpha.18"
       - application:
           name: ros2
           version: "humble"
@@ -168,7 +168,7 @@ versions:
         devspace:
           ubuntuDistro: jammy
           desktop: xfce
-          version: "0.1.14"
+          version: "0.2.6-alpha.18"
       - application:
           name: ros2
           version: "iron"
@@ -178,7 +178,7 @@ versions:
         devspace:
           ubuntuDistro: jammy
           desktop: xfce
-          version: "0.1.14"
+          version: "0.2.6-alpha.18"
       aiml:
       - application:
           name: yolov4

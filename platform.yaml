@@ -231,3 +231,24 @@ versions:
           ubuntuDistro: jammy
           desktop: xfce
           version: "0.2.6-alpha.19"
+      simulation:
+      - application:
+          name: carla
+          version: "0.9.15"
+          alias: "CARLA Simulator"
+          description: "Experience realistic simulations, develop algorithms, and test autonomous vehicle behaviors in a controlled virtual environment. This specialized workspace on robolaunch offers everything you need to explore and innovate within the field of autonomous driving simulation."
+          icon: "https://raw.githubusercontent.com/robolaunch/trademark/main/applications/carla-logo.png"
+        devspace:
+          ubuntuDistro: focal
+          desktop: xfce
+          version: "0.2.6-alpha.19"
+      - application:
+          name: unity
+          version: "3.7.0"
+          alias: "Unity"
+          description: "Craft, prototype, and optimize your games or simulations seamlessly using Unity's powerful features. This dedicated workspace on robolaunch is tailored for building and testing Unity applications, providing a streamlined environment for your creative and technical endeavors."
+          icon: "https://raw.githubusercontent.com/robolaunch/trademark/main/applications/unity-logo.png"
+        devspace:
+          ubuntuDistro: focal
+          desktop: xfce
+          version: "0.2.6-alpha.19"

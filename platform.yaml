@@ -264,6 +264,16 @@ versions:
           desktop: xfce
           version: "0.2.6-alpha.19"
       - application:
+          name: blender
+          version: "3.0.1+dfsg-7"
+          alias: "Blender"
+          description: "Seamlessly design, model, and render stunning visuals with Blender's comprehensive suite of tools. This dedicated workspace on robolaunch is your gateway to unleashing your creativity and bringing your artistic visions to life in the world of 3D graphics."
+          icon: "https://raw.githubusercontent.com/robolaunch/trademark/main/applications/blender-logo.png"
+        devspace:
+          ubuntuDistro: jammy
+          desktop: xfce
+          version: "0.2.6-alpha.19"
+      - application:
           name: librecad
           version: "2.1.3-1.2+deb10u1build0.20.04.1"
           alias: "LibreCAD"
@@ -274,13 +284,33 @@ versions:
           desktop: xfce
           version: "0.2.6-alpha.19"
       - application:
+          name: librecad
+          version: "2.1.3-3"
+          alias: "LibreCAD"
+          description: "Unlock the power of CAD design with the LibreCAD environment on robolaunch. Seamlessly create precise 2D drawings, drafts, and schematics with LibreCAD's intuitive interface and extensive feature set."
+          icon: "https://raw.githubusercontent.com/robolaunch/trademark/main/applications/librecad-logo.png"
+        devspace:
+          ubuntuDistro: jammy
+          desktop: xfce
+          version: "0.2.6-alpha.19"
+      - application:
           name: qcad
-          version: "3.28.1-trial-linux-qt5.14-x86_64"
+          version: "3.29.4-trial-linux-x86_64"
           alias: "QCAD"
           description: "Experience the world of computer-aided design with the QCAD environment on robolaunch. Create precise 2D drawings, blueprints, and schematics with QCAD's user-friendly interface and powerful features."
           icon: "https://raw.githubusercontent.com/robolaunch/trademark/main/applications/qcad-logo.png"
         devspace:
           ubuntuDistro: focal
+          desktop: xfce
+          version: "0.2.6-alpha.19"
+      - application:
+          name: qcad
+          version: "3.29.4-trial-linux-x86_64"
+          alias: "QCAD"
+          description: "Experience the world of computer-aided design with the QCAD environment on robolaunch. Create precise 2D drawings, blueprints, and schematics with QCAD's user-friendly interface and powerful features."
+          icon: "https://raw.githubusercontent.com/robolaunch/trademark/main/applications/qcad-logo.png"
+        devspace:
+          ubuntuDistro: jammy
           desktop: xfce
           version: "0.2.6-alpha.19"
       - application:
@@ -291,5 +321,15 @@ versions:
           icon: "https://raw.githubusercontent.com/robolaunch/trademark/main/applications/kicad-logo.png"
         devspace:
           ubuntuDistro: focal
+          desktop: xfce
+          version: "0.2.6-alpha.19"
+      - application:
+          name: kicad
+          version: "6.0.2+dfsg-1"
+          alias: "KiCad"
+          description: "Delve into electronic design with the KiCad environment on robolaunch. Craft intricate schematics, design PCB layouts, and simulate circuits with KiCad's comprehensive suite of tools."
+          icon: "https://raw.githubusercontent.com/robolaunch/trademark/main/applications/kicad-logo.png"
+        devspace:
+          ubuntuDistro: jammy
           desktop: xfce
           version: "0.2.6-alpha.19"

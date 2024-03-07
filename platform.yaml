@@ -57,21 +57,21 @@ versions:
           resources:
             cloudInstance: https://gist.githubusercontent.com/tunahanertekin/f041e2c3fbc6cdaadd72816c350b357c/raw/bfb60f76286cd8352999649db07ad53bb05da9fb/ch-ci.yaml
         robot:
-          version: v0.2.7-alpha.4
+          version: v0.2.7-alpha.6.1
           repository: https://github.com/robolaunch/robot-operator
           docs: https://robolaunch.github.io/robot-operator/#/
-          release: https://raw.githubusercontent.com/robolaunch/robot-operator/v0.2.7-alpha.4/hack/deploy/manifests/robot_operator.yaml
+          release: https://raw.githubusercontent.com/robolaunch/robot-operator/v0.2.7-alpha.6.1/hack/deploy/manifests/robot_operator.yaml
           helm:
             repository: https://robolaunch.github.io/charts/
-            version: 0.2.7-alpha.4
+            version: 0.2.7-alpha.6.1
         fleet:
-          version: v0.1.6-alpha.14
+          version: v0.1.6-alpha.16
           repository: https://github.com/robolaunch/fleet-operator
           docs: https://github.com/robolaunch/fleet-operator/blob/main/docs/reference.md
-          release: https://raw.githubusercontent.com/robolaunch/fleet-operator/v0.1.6-alpha.14/hack/deploy/manifests/fleet_operator.yaml
+          release: https://raw.githubusercontent.com/robolaunch/fleet-operator/v0.1.6-alpha.16/hack/deploy/manifests/fleet_operator.yaml
           helm:
             repository: https://robolaunch.github.io/charts/
-            version: 0.1.6-alpha.14
+            version: 0.1.6-alpha.16
   devCloud:
     kubernetes:
       version: 1.27.4

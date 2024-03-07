@@ -65,13 +65,13 @@ versions:
             repository: https://robolaunch.github.io/charts/
             version: 0.2.7-alpha.6.1
         fleet:
-          version: v0.1.6-alpha.16
+          version: v0.1.6-alpha.17
           repository: https://github.com/robolaunch/fleet-operator
           docs: https://github.com/robolaunch/fleet-operator/blob/main/docs/reference.md
-          release: https://raw.githubusercontent.com/robolaunch/fleet-operator/v0.1.6-alpha.16/hack/deploy/manifests/fleet_operator.yaml
+          release: https://raw.githubusercontent.com/robolaunch/fleet-operator/v0.1.6-alpha.17/hack/deploy/manifests/fleet_operator.yaml
           helm:
             repository: https://robolaunch.github.io/charts/
-            version: 0.1.6-alpha.16
+            version: 0.1.6-alpha.17
   devCloud:
     kubernetes:
       version: 1.27.4

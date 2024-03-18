@@ -107,7 +107,7 @@ versions:
         devspace:
           ubuntuDistro: focal
           desktop: xfce
-          version: "0.2.6-alpha.19"
+          version: "0.2.6-alpha.20"
       - application:
           name: plain
           version: "0.1.0"
@@ -117,7 +117,7 @@ versions:
         devspace:
           ubuntuDistro: jammy
           desktop: xfce
-          version: "0.2.6-alpha.19"
+          version: "0.2.6-alpha.20"
       - application:
           name: plain
           version: "0.1.0"

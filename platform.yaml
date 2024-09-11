@@ -342,6 +342,16 @@ versions:
           ubuntuDistro: focal
           desktop: xfce
           version: "0.2.6-alpha.19"
+      - application:
+          name: nvidia-omniverse
+          version: "1.9.13"
+          alias: "NVIDIA Omniverse"
+          description: "Unlock the potential of AI system development with NVIDIA Omniverse on robolaunch. Seamlessly integrate Universal Scene Description (OpenUSD) and RTX rendering technologies into your existing software tools and simulation workflows. This comprehensive platform provides developers with powerful APIs, SDKs, and services designed to enhance your simulation environment and drive innovation in AI."
+          icon: "https://raw.githubusercontent.com/robolaunch/trademark/main/applications/ubuntu-logo.png"
+        devspace:
+          ubuntuDistro: jammy
+          desktop: xfce
+          version: "0.1.0-beta.2"
       cad:
       - application:
           name: blender

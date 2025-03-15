@@ -280,6 +280,16 @@ versions:
           ubuntuDistro: jammy
           desktop: xfce
           version: "0.2.6-alpha.19"
+      - application:
+          name: ollama
+          version: "0.6.1"
+          alias: "OLLAMA"
+          description: "Get up and running with large language models."
+          icon: "https://raw.githubusercontent.com/robolaunch/trademark/main/applications/ollama.png"
+        devspace:
+          ubuntuDistro: jammy
+          desktop: xfce
+          version: "0.2.6-alpha.19"
       data-science:
       - application:
           name: pyspark

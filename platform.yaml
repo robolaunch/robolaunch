@@ -280,6 +280,8 @@ versions:
           ubuntuDistro: jammy
           desktop: xfce
           version: "0.2.6-alpha.19"
+      data-science:
+      llm:
       - application:
           name: ollama
           version: "0.6.1"
@@ -290,7 +292,16 @@ versions:
           ubuntuDistro: jammy
           desktop: xfce
           version: "0.2.6-alpha.19"
-      data-science:
+      - application:
+          name: openLLM
+          version: "0.6.20"
+          alias: "openLLM"
+          description: "Self-Hosting LLMs Made Easy."
+          icon: "https://raw.githubusercontent.com/robolaunch/trademark/main/applications/openllm.png"
+        devspace:
+          ubuntuDistro: jammy
+          desktop: xfce
+          version: "0.2.6-alpha.19"
       - application:
           name: pyspark
           version: "3.5.0"

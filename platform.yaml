@@ -280,7 +280,7 @@ versions:
           ubuntuDistro: jammy
           desktop: xfce
           version: "0.2.6-alpha.19"
-      llm:
+      LLM:
       - application:
           name: ollama
           version: "0.6.1"

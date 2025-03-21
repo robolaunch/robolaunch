@@ -301,6 +301,17 @@ versions:
           ubuntuDistro: jammy
           desktop: xfce
           version: "0.2.6-alpha.19"
+      workflow:
+      - application:
+          name: n8n
+          version: "1.83.2"
+          alias: "n8n"
+          description: "Workflow automation platform with native AI capabilities"
+          icon: "https://raw.githubusercontent.com/robolaunch/trademark/main/applications/n8n.png"
+        devspace:
+          ubuntuDistro: jammy
+          desktop: xfce
+          version: "0.2.6-alpha.19"
       data-science:
       - application:
           name: pyspark
